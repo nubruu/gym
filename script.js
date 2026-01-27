@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (day === 'all') {
                 dayCards.forEach(card => card.style.display = 'block');
-                dashboardTitle.textContent = '6-DAY ELITE SPLIT';
+                dashboardTitle.textContent = '6-DAY NUBRU SPLIT';
             } else {
                 dayCards.forEach((card, index) => {
                     if ((index + 1).toString() === day) {

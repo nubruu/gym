@@ -1,4 +1,4 @@
-const CACHE_NAME = 'elite-gym-v1';
+const CACHE_NAME = 'nubru-plan-v1';
 const ASSETS = [
     './',
     './index.html',
