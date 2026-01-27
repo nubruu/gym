@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Performance - Workout Plan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00f2fe">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icon.png">
+</head>
+
+<body>
+    <div id="selection-screen" class="screen active">
+        <div class="selection-container">
+            <header>
+                <h1>CHOOSE YOUR PATH</h1>
+                <p>Select a workout routine to begin your session</p>
+            </header>
+            <div class="selection-grid">
+                <button class="select-btn" data-day="1"><span>Day 1</span> Chest</button>
+                <button class="select-btn" data-day="2"><span>Day 2</span> Back</button>
+                <button class="select-btn" data-day="3"><span>Day 3</span> Shoulders + Abs</button>
+                <button class="select-btn" data-day="4"><span>Day 4</span> Arms</button>
+                <button class="select-btn" data-day="5"><span>Day 5</span> Legs</button>
+                <button class="select-btn" data-day="6"><span>Day 6</span> Chest + Back</button>
+                <button class="select-btn" data-day="all"><span>All Days</span> Full Plan</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="dashboard" class="screen">
+        <div class="container">
+            <nav class="breadcrumb">
+                <button id="back-to-selection">← Change Routine</button>
+            </nav>
+            <header>
+                <h1 id="dashboard-title">6-DAY ELITE SPLIT</h1>
+                <p>Master your physique with precision and consistency</p>
+            </header>
+
+            <main class="workout-grid">
+                <!-- Day 1: Chest -->
+                <section class="day-card" style="animation-delay: 0.1s">
+                    <h2 class="day-title">DAY 1 – CHEST</h2>
+                    <ul class="exercise-list">
+                        <li class="exercise-item">
+                            <span class="exercise-num">1</span>
+                            <span class="exercise-name">Barbell Bench Press</span>
+                            <span class="exercise-reps">4 × 5–7</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">2</span>
+                            <span class="exercise-name">Incline Dumbbell Press</span>
+                            <span class="exercise-reps">3 × 8–10</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">3</span>
+                            <span class="exercise-name">Chest Fly (Machine / DB)</span>
+                            <span class="exercise-reps">3 × 12–15</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">4</span>
+                            <span class="exercise-name">Cable Crossover (Low → High)</span>
+                            <span class="exercise-reps">3 × 12–15</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">5</span>
+                            <span class="exercise-name">Chest Dips</span>
+                            <span class="exercise-reps">2 × Failure</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Day 2: Back -->
+                <section class="day-card" style="animation-delay: 0.2s">
+                    <h2 class="day-title">DAY 2 – BACK</h2>
+                    <ul class="exercise-list">
+                        <li class="exercise-item">
+                            <span class="exercise-num">1</span>
+                            <span class="exercise-name">Pull-ups / Lat Pulldown</span>
+                            <span class="exercise-reps">4 × 6–10</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">2</span>
+                            <span class="exercise-name">Barbell Row</span>
+                            <span class="exercise-reps">4 × 6–8</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">3</span>
+                            <span class="exercise-name">Seated Cable Row</span>
+                            <span class="exercise-reps">3 × 10–12</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">4</span>
+                            <span class="exercise-name">Single-Arm Lat Pulldown</span>
+                            <span class="exercise-reps">3 × 12</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">5</span>
+                            <span class="exercise-name">Face Pulls</span>
+                            <span class="exercise-reps">3 × 15–20</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Day 3: Shoulders + Abs -->
+                <section class="day-card" style="animation-delay: 0.3s">
+                    <h2 class="day-title">DAY 3 – SHOULDERS + ABS</h2>
+                    <ul class="exercise-list">
+                        <li class="exercise-item">
+                            <span class="exercise-num">1</span>
+                            <span class="exercise-name">Overhead Shoulder Press</span>
+                            <span class="exercise-reps">4 × 6–8</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">2</span>
+                            <span class="exercise-name">Dumbbell Lateral Raise</span>
+                            <span class="exercise-reps">4 × 12–15</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">3</span>
+                            <span class="exercise-name">Cable Lateral Raise (SA)</span>
+                            <span class="exercise-reps">3 × 15</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">4</span>
+                            <span class="exercise-name">Rear Delt Fly</span>
+                            <span class="exercise-reps">3 × 15–20</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">5</span>
+                            <span class="exercise-name">Hanging Leg Raise</span>
+                            <span class="exercise-reps">3 × 10–15</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">6</span>
+                            <span class="exercise-name">Cable Crunch</span>
+                            <span class="exercise-reps">3 × 12–15</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Day 4: Arms -->
+                <section class="day-card" style="animation-delay: 0.4s">
+                    <h2 class="day-title">DAY 4 – ARMS</h2>
+                    <ul class="exercise-list">
+                        <li class="exercise-item">
+                            <span class="exercise-num">1</span>
+                            <span class="exercise-name">EZ-Bar Curl</span>
+                            <span class="exercise-reps">4 × 8–10</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">2</span>
+                            <span class="exercise-name">Incline Dumbbell Curl</span>
+                            <span class="exercise-reps">3 × 10–12</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">3</span>
+                            <span class="exercise-name">Hammer Curl</span>
+                            <span class="exercise-reps">3 × 12–15</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">4</span>
+                            <span class="exercise-name">Cable Triceps Pushdown</span>
+                            <span class="exercise-reps">4 × 10–12</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">5</span>
+                            <span class="exercise-name">Overhead Triceps Ext.</span>
+                            <span class="exercise-reps">3 × 12–15</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">6</span>
+                            <span class="exercise-name">Dips</span>
+                            <span class="exercise-reps">3 × Failure</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Day 5: Legs -->
+                <section class="day-card" style="animation-delay: 0.5s">
+                    <h2 class="day-title">DAY 5 – LEGS</h2>
+                    <ul class="exercise-list">
+                        <li class="exercise-item">
+                            <span class="exercise-num">1</span>
+                            <span class="exercise-name">Barbell Squat</span>
+                            <span class="exercise-reps">4 × 5–8</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">2</span>
+                            <span class="exercise-name">Romanian Deadlift</span>
+                            <span class="exercise-reps">3 × 6–8</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">3</span>
+                            <span class="exercise-name">Leg Press</span>
+                            <span class="exercise-reps">3 × 10–12</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">4</span>
+                            <span class="exercise-name">Lying Leg Curl</span>
+                            <span class="exercise-reps">3 × 10–12</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">5</span>
+                            <span class="exercise-name">Standing Calf Raise</span>
+                            <span class="exercise-reps">5 × 12–15</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Day 6: Chest + Back -->
+                <section class="day-card" style="animation-delay: 0.6s">
+                    <h2 class="day-title">DAY 6 – CHEST + BACK</h2>
+                    <ul class="exercise-list">
+                        <li class="exercise-item">
+                            <span class="exercise-num">1</span>
+                            <span class="exercise-name">Incline Dumbbell Press</span>
+                            <span class="exercise-reps">3 × 10–12</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">2</span>
+                            <span class="exercise-name">Cable Fly</span>
+                            <span class="exercise-reps">3 × 15</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">3</span>
+                            <span class="exercise-name">Wide-Grip Lat Pulldown</span>
+                            <span class="exercise-reps">3 × 10–12</span>
+                        </li>
+                        <li class="exercise-item">
+                            <span class="exercise-num">4</span>
+                            <span class="exercise-name">One-Arm Dumbbell Row</span>
+                            <span class="exercise-reps">3 × 12 / side</span>
+                        </li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+        <script src="script.js"></script>
+</body>
+
+</html>
