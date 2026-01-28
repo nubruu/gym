@@ -110,6 +110,25 @@ header p {
     gap: 10px;
 }
 
+.category-tag {
+    display: inline-block;
+    background: rgba(0, 242, 254, 0.1);
+    color: #00f2fe;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 15px 0 10px 0;
+    border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+.day-card .category-tag:first-of-type {
+    margin-top: 0;
+}
+
+
 .exercise-list {
     list-style: none;
 }
