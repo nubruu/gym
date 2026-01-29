@@ -16,6 +16,38 @@ document.addEventListener('DOMContentLoaded', () => {
         checkbox.classList.add('checkbox-btn');
         item.prepend(checkbox);
 
+        // Add Weight Input
+        const exerciseName = item.querySelector('.exercise-name').textContent;
+        const weightContainer = document.createElement('div');
+        weightContainer.classList.add('weight-input-container');
+        weightContainer.innerHTML = `
+            <span class="weight-input-label">MAX</span>
+            <input type="number" class="weight-input" placeholder="0" data-exercise="${exerciseName}">
+            <span class="weight-input-unit">kg</span>
+        `;
+
+        // Append weight container before the reps span
+        const repsSpan = item.querySelector('.exercise-reps');
+        item.insertBefore(weightContainer, repsSpan);
+
+        const weightInput = weightContainer.querySelector('.weight-input');
+
+        // Load saved weight
+        const savedWeight = localStorage.getItem(`weight_${exerciseName}`);
+        if (savedWeight) {
+            weightInput.value = savedWeight;
+        }
+
+        // Save weight on input
+        weightInput.addEventListener('input', (e) => {
+            localStorage.setItem(`weight_${exerciseName}`, e.target.value);
+        });
+
+        // Prevent item toggle if clicking input
+        weightContainer.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
         item.addEventListener('click', () => {
             checkbox.classList.toggle('checked');
             item.style.opacity = checkbox.classList.contains('checked') ? '0.5' : '1';

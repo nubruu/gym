@@ -135,12 +135,28 @@ header p {
 
 .exercise-item {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto auto 1fr auto auto;
     align-items: center;
     gap: 15px;
-    padding: 12px 0;
+    padding: 12px 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     transition: var(--transition);
+}
+
+@media (max-width: 600px) {
+    .exercise-item {
+        grid-template-columns: auto 20px 1fr;
+        gap: 10px;
+    }
+
+    .weight-input-container {
+        grid-column: 2 / 4;
+        margin-top: 5px;
+    }
+
+    .exercise-reps {
+        grid-column: 4 / 6;
+    }
 }
 
 .exercise-item:last-child {
@@ -202,6 +218,55 @@ header p {
 
 .checkbox-btn.checked {
     background: var(--primary);
+}
+
+/* Weight Input Styling */
+.weight-input-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+}
+
+.weight-input-container:focus-within {
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.weight-input-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.weight-input {
+    background: transparent;
+    border: none;
+    color: var(--text);
+    width: 45px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    outline: none;
+    text-align: right;
+}
+
+/* Hide spin buttons */
+.weight-input::-webkit-inner-spin-button,
+.weight-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.weight-input-unit {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
 }
 
 /* Screens */
