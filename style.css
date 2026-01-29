@@ -134,8 +134,7 @@ header p {
 }
 
 .exercise-item {
-    display: grid;
-    grid-template-columns: auto auto 1fr auto auto;
+    display: flex;
     align-items: center;
     gap: 15px;
     padding: 12px 10px;
@@ -143,24 +142,62 @@ header p {
     transition: var(--transition);
 }
 
-@media (max-width: 600px) {
+.exercise-item:last-child {
+    border-bottom: none;
+}
+
+.exercise-item:hover {
+    background: rgba(255, 255, 255, 0.02);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+}
+
+.exercise-num {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 0.9rem;
+    width: 25px;
+    flex-shrink: 0;
+}
+
+.exercise-name {
+    font-weight: 500;
+    flex: 1;
+}
+
+.weight-input-container {
+    flex-shrink: 0;
+}
+
+.exercise-reps {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+@media (max-width: 650px) {
     .exercise-item {
-        grid-template-columns: auto 20px 1fr;
+        flex-wrap: wrap;
         gap: 10px;
     }
 
+    .exercise-name {
+        width: calc(100% - 60px);
+    }
+
     .weight-input-container {
-        grid-column: 2 / 4;
-        margin-top: 5px;
+        margin-left: 35px;
+        /* Offset for checkbox + num */
+        flex: 1;
     }
 
     .exercise-reps {
-        grid-column: 4 / 6;
+        width: auto;
     }
-}
-
-.exercise-item:last-child {
-    border-bottom: none;
 }
 
 .exercise-item:hover {
